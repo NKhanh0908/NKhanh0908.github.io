@@ -670,27 +670,58 @@ environment.
       <h2 class="section-title">Featured <em>Work</em></h2>
       <div class="projects-grid">
 
-        <div class="project-card reveal">
-          <div class="project-num">project_01</div>
-          <div class="project-name">Dating Website</div>
-          <p class="project-desc">Real-time dating platform với WebSocket &amp; full-stack integration. <span style="color:var(--accent);font-family:var(--mono);font-size:11px">Team 3 · System Design &amp; Performance Optimization</span></p>
-          <div class="project-tags">
-            <span class="project-tag">Spring Boot</span>
-            <span class="project-tag">WebSocket/STOMP</span>
-            <span class="project-tag">Redis</span>
-            <span class="project-tag">JWT</span>
-            <span class="project-tag">MySQL</span>
-            <span class="project-tag">ReactJS</span>
-          </div>
-          <ul class="project-highlights">
-  <li>Researched and optimized composite indexing reducing query latency faster on a 50k-row dataset, validated with EXPLAIN ANALYZE</li>
-  <li>Implemented Redis caching for user profiles, reducing database query volume by ~40%, verified through query logs</li>
-  <li>Secured WebSocket handshake with JWT authentication, rejecting unauthenticated connections before broker access</li>
-  <li>Built a custom rate-limiting filter to mitigate brute-force attacks on sensitive endpoints</li>
-  <li>Developed JUnit 5 and Mockito unit/integration tests for authentication flows and matching business rules</li>
-</ul>
-          <a href="https://github.com/NKhanh0908/dating-website" target="_blank" class="project-link">View on GitHub →</a>
-        </div>
+       <div class="project-card reveal">
+  <div class="project-num">project_01</div>
+  <div class="project-name">Dating Website</div>
+
+  <p class="project-desc">
+    A real-time full-stack social matching platform designed for instant messaging, profile discovery, and intelligent user matching.
+    <span style="color:var(--accent);font-family:var(--mono);font-size:11px">
+      Team of 3 · System Design & Performance Optimization
+    </span>
+  </p>
+
+  <div class="project-tags">
+    <span class="project-tag">Spring Boot</span>
+    <span class="project-tag">Spring Security</span>
+    <span class="project-tag">WebSocket/STOMP</span>
+    <span class="project-tag">Redis</span>
+    <span class="project-tag">JWT</span>
+    <span class="project-tag">MySQL</span>
+    <span class="project-tag">ReactJS</span>
+    <span class="project-tag">Docker</span>
+  </div>
+
+  <ul class="project-highlights">
+    <li>
+      Designed and implemented a real-time messaging architecture using WebSocket/STOMP, enabling low-latency bidirectional communication for chat, notifications, and live interaction events
+    </li>
+
+    <li>
+      Researched and optimized composite indexing strategies for discovery queries reducing query latency faster on a 50k-row dataset, validated using EXPLAIN ANALYZE
+    </li>
+
+    <li>
+      Implemented Redis-based cache-aside strategy for user profiles and frequently accessed matching data, reducing database query volume by ~40% and improving response consistency under load
+    </li>
+
+    <li>
+      Secured both REST and WebSocket communication using JWT authentication, including authenticated handshake interception that rejects unauthorized connections before broker access
+    </li>
+
+    <li>
+      Built a custom rate-limiting and abuse-protection filter for sensitive endpoints (authentication, OTP, password recovery), mitigating brute-force and spam request patterns
+    </li>
+
+    <li>
+      Developed JUnit 5 and Mockito unit/integration tests covering authentication workflows, matching rules, and business validation logic to ensure reliability across service layers
+    </li>
+  </ul>
+
+  <a href="https://github.com/NKhanh0908/dating-website" target="_blank" class="project-link">
+    View on GitHub →
+  </a>
+</div>
 
         <div class="project-card reveal">
   <div class="project-num">project_02</div>
