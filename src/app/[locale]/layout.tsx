@@ -6,6 +6,10 @@ import { locales, Locale } from '@/i18n/config';
 import { inter } from '@/styles/fonts';
 import '@/app/globals.css';
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 interface LayoutProps {
   children: ReactNode;
   params: Promise<{
