@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Redirect root and any unknown path to /en/
+      // so next-intl locale routing works on GitHub Pages static hosting
+      const locale = (navigator.language || 'en').startsWith('vi') ? 'vi' : 'en';
+      const path = window.location.pathname.replace(/^\/[^/]+\.github\.io/, '');
+      // If path already has a locale prefix, honour it; otherwise go to default
+      const locales = ['en', 'vi'];
+      const hasLocale = locales.some((l) => path === `/${l}` || path.startsWith(`/${l}/`));
+      if (!hasLocale) {
+        window.location.replace(`/${locale}/`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
