@@ -1,0 +1,22 @@
+{
+  "title": "Let's Build Something Together",
+  "content": "I'm always interested in discussing software engineering, backend development, and opportunities to create meaningful products.",
+  "channels": {
+    "email": {
+      "label": "Email",
+      "value": "khanhnq0908@gmail.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "0931 213 714"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "NKhanh0908"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "Nguyen Quoc Khanh"
+    }
+  }
+}

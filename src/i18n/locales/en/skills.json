@@ -1,0 +1,15 @@
+{
+  "title": "Technologies I Work With",
+  "backend": {
+    "title": "Backend",
+    "skills": ["Java", "Spring Boot", "Spring Security", "JWT", "Redis", "PostgreSQL", "MySQL", "MongoDB", "WebSocket"]
+  },
+  "frontend": {
+    "title": "Frontend",
+    "skills": ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS"]
+  },
+  "tools": {
+    "title": "Tools & DevOps",
+    "skills": ["Docker", "Git", "Maven", "Postman", "Swagger"]
+  }
+}

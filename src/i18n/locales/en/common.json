@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "growth": "Growth",
+    "contact": "Contact"
+  },
+  "footer": {
+    "builtBy": "Built with ♥ by Nguyen Quoc Khanh",
+    "copyright": "NQK © 2025 — Ho Chi Minh City, Vietnam"
+  },
+  "cv": {
+    "filename": "NguyenQuocKhanh_CV.pdf",
+    "openInNewTab": "Open in new tab ↗",
+    "download": "Download CV",
+    "view": "View CV ↗",
+    "close": "Close"
+  }
+}

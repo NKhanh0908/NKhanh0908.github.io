@@ -1,0 +1,45 @@
+{
+  "title": "Career Timeline",
+  "milestones": {
+    "m2022": {
+      "year": "2022",
+      "title": "Saigon University",
+      "badge": "Bachelor of IS",
+      "period": "09/2022 – 09/2026 (expected)",
+      "gpa": "GPA 8.0 / 10",
+      "toeic": "TOEIC 550 RL",
+      "coursesHeader": "Featured Courses",
+      "courses": [
+        { "name": "OOP", "grade": "8.2/10" },
+        { "name": "DSA", "grade": "8.0/10" },
+        { "name": "System Analysis & Design", "grade": "9.0/10" },
+        { "name": "Database", "grade": "9.3/10" },
+        { "name": "Distributed DB", "grade": "9.2/10" },
+        { "name": "Data Analysis", "grade": "9.1/10" }
+      ],
+      "activitiesHeader": "Activities",
+      "activityRole": "Technical Researcher",
+      "activityDesc": "Researching AI applications in software development processes"
+    },
+    "m2025": {
+      "year": "2025",
+      "title": "VINIPR Co., Ltd.",
+      "badge": "Backend Intern Developer",
+      "period": "Aug 2025 – Dec 2025",
+      "details": [
+        "Designed and maintained 20+ RESTful APIs across 3 e-commerce modules (product, order, user management)",
+        "Collaborated in an Agile/Scrum team across 4 sprint cycles, contributing to daily stand-ups, peer code reviews, and sprint planning",
+        "Applied SOLID principles to refactor legacy service classes and rewrite N+1 query patterns"
+      ]
+    },
+    "m2026": {
+      "year": "2026",
+      "title": "Alpaca Solutions",
+      "badge": "Full stack Developer",
+      "period": "May 2026 – Present",
+      "details": [
+        "Currently working here"
+      ]
+    }
+  }
+}

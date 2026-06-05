@@ -1,0 +1,22 @@
+{
+  "title": "Hãy cùng xây dựng điều gì đó",
+  "content": "Mình luôn sẵn lòng thảo luận về kỹ nghệ phần mềm (software engineering), phát triển hệ thống (backend development) và các cơ hội cùng nhau tạo ra các sản phẩm ý nghĩa.",
+  "channels": {
+    "email": {
+      "label": "Email",
+      "value": "khanhnq0908@gmail.com"
+    },
+    "phone": {
+      "label": "Điện thoại",
+      "value": "0931 213 714"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "NKhanh0908"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "Nguyen Quoc Khanh"
+    }
+  }
+}

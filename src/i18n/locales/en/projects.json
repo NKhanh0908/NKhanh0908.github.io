@@ -1,0 +1,35 @@
+{
+  "title": "Featured Projects",
+  "viewOnGithub": "View on GitHub →",
+  "items": [
+    {
+      "name": "Dating Platform",
+      "description": "Real-time communication platform designed around WebSocket messaging, JWT authentication, and modern backend architecture.",
+      "teamInfo": "Team of 3 · System Design & Performance Optimization",
+      "tags": ["Spring Boot", "Spring Security", "WebSocket", "Redis", "JWT", "MySQL", "ReactJS", "Docker"],
+      "github": "https://github.com/NKhanh0908/dating-website",
+      "highlights": [
+        "Designed and implemented a real-time messaging architecture using WebSocket/STOMP, enabling low-latency bidirectional communication for chat, notifications, and live interaction events.",
+        "Researched and optimized composite indexing strategies for discovery queries reducing query latency on a 50k-row dataset, validated using EXPLAIN ANALYZE.",
+        "Implemented Redis-based cache-aside strategy for user profiles and frequently accessed matching data, reducing database query volume by ~40% and improving response consistency under load.",
+        "Secured both REST and WebSocket communication using JWT authentication, including authenticated handshake interception that rejects unauthorized connections before broker access.",
+        "Built a custom rate-limiting and abuse-protection filter for sensitive endpoints (authentication, OTP, password recovery), mitigating brute-force and spam request patterns.",
+        "Developed JUnit 5 and Mockito unit/integration tests covering authentication workflows, matching rules, and business validation logic to ensure reliability across service layers."
+      ]
+    },
+    {
+      "name": "HRM System",
+      "description": "Enterprise HR management platform covering employee lifecycle management from recruitment to payroll.",
+      "teamInfo": "Solo · Core Developer",
+      "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "Redis", "JavaMail", "Cloudinary", "Docker", "MySQL"],
+      "github": "https://github.com/NKhanh0908/hrm",
+      "highlights": [
+        "Designed and implemented 5 core ERP-HR modules (Recruitment, Employee Management, Attendance, Payroll, and Training) with 30+ RESTful APIs following layered architecture and clean service abstraction.",
+        "Built composable dynamic querying using JPA Specification API, enabling flexible filtering, search, pagination, and sorting across multiple business modules with reusable specifications.",
+        "Optimized data access with Cache-Aside Redis strategy, B-Tree and composite indexing, and horizontal partitioning for payroll history tables to improve query performance on large datasets.",
+        "Integrated role-based access control (RBAC) with Spring Security, securing sensitive HR operations such as salary updates, employee records access, and attendance approval workflows.",
+        "Containerized infrastructure with Docker for consistent local development and deployment environments, including database, cache, and application service orchestration."
+      ]
+    }
+  ]
+}

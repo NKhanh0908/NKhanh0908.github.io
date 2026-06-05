@@ -1,0 +1,18 @@
+{
+  "greeting": "Xin chào, mình là Khánh.",
+  "role": "Lập trình viên Fullstack hướng Backend",
+  "description": "Mình thích xây dựng các hệ thống bảo mật, có thể mở rộng và dễ bảo trì bằng các công nghệ backend hiện đại.",
+  "cta": {
+    "projects": "Xem dự án",
+    "contact": "Liên hệ"
+  },
+  "blueprintCard": {
+    "header": "HỒ SƠ HỆ THỐNG // v1.0",
+    "name": "Nguyễn Quốc Khánh",
+    "role": "Lập trình viên Backend",
+    "focusAreas": ["Thiết kế hệ thống", "Phát triển API", "Bảo mật", "Hiệu suất"],
+    "coreStack": ["Java", "Spring Boot", "Redis", "PostgreSQL"],
+    "blueprintId": "MÃ BẢN VẼ: SYS-2026-KN",
+    "version": "v1.0"
+  }
+}

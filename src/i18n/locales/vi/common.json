@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "skills": "Công nghệ",
+    "projects": "Dự án",
+    "growth": "Phát triển",
+    "contact": "Liên hệ"
+  },
+  "footer": {
+    "builtBy": "Được thiết kế và phát triển với ♥ bởi Nguyễn Quốc Khánh",
+    "copyright": "NQK © 2025 — Thành phố Hồ Chí Minh, Việt Nam"
+  },
+  "cv": {
+    "filename": "NguyenQuocKhanh_CV.pdf",
+    "openInNewTab": "Mở trong tab mới ↗",
+    "download": "Tải xuống CV",
+    "view": "Xem CV ↗",
+    "close": "Đóng"
+  }
+}

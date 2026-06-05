@@ -1,0 +1,18 @@
+{
+  "greeting": "Hi, I'm Khanh.",
+  "role": "Backend-focused Fullstack Developer",
+  "description": "I enjoy building secure, scalable and maintainable systems using modern backend technologies.",
+  "cta": {
+    "projects": "View Projects",
+    "contact": "Contact Me"
+  },
+  "blueprintCard": {
+    "header": "SYSTEM PROFILE // v1.0",
+    "name": "Nguyen Quoc Khanh",
+    "role": "Backend Developer",
+    "focusAreas": ["System Design", "API Development", "Security", "Performance"],
+    "coreStack": ["Java", "Spring Boot", "Redis", "PostgreSQL"],
+    "blueprintId": "BLUEPRINT ID: SYS-2026-KN",
+    "version": "v1.0"
+  }
+}
