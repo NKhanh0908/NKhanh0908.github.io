@@ -472,46 +472,36 @@ export function ExperienceSection() {
             </div>
 
             {/* 2. Mobile Vertical Timeline (under md) */}
-            <div className="block md:hidden relative h-[800px] w-full pl-12 pr-4">
+            <div className="block md:hidden relative w-full flex flex-col gap-12 pl-16">
               
-              {/* SVG Line (Vertical) */}
-              <svg className="absolute left-6 top-0 bottom-0 w-[6px] h-[90%] overflow-visible pointer-events-none">
-                {/* Gray track */}
-                <path
-                  d="M 3 0 L 3 720" // 800 * 0.90 = 720px
-                  className="stroke-border/60 stroke-[2.5px] fill-none"
-                />
-                {/* Blue active line */}
-                <path
-                  ref={verticalPathRef}
-                  d="M 3 0 L 3 720"
-                  className="stroke-[#3B6DD4] stroke-[2.5px] fill-none"
-                />
-                {/* Arrowhead at the bottom end */}
-                <path
-                  d="M -5 -8 L 0 2 L 5 -8 Z"
-                  fill="#3B6DD4"
-                  className={cn(
-                    "opacity-0 transition-opacity duration-300",
-                    inView ? "opacity-100" : ""
-                  )}
-                  style={{
-                    transform: 'translate(3px, 720px)',
-                    transitionDelay: '1.75s',
-                  }}
-                />
-              </svg>
+              {/* Vertical Timeline Line */}
+              <div className="absolute left-6 top-2 bottom-2 w-[2.5px] bg-border/60" />
+              <div 
+                className={cn(
+                  "absolute left-6 top-2 bottom-2 w-[2.5px] bg-[#3B6DD4] origin-top transition-transform duration-1000 ease-out",
+                  inView ? "scale-y-100" : "scale-y-0"
+                )}
+                style={{ transitionDelay: '0.5s' }}
+              />
+              
+              {/* Arrowhead at the bottom */}
+              <div 
+                className={cn(
+                  "absolute left-[21px] bottom-0 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-[#3B6DD4] transition-opacity duration-300",
+                  inView ? "opacity-100" : "opacity-0"
+                )}
+                style={{ transitionDelay: '1.5s' }}
+              />
 
               {/* Milestones (Mobile) */}
               {milestones.map((m, idx) => {
-                const dotDelay = 1.8 * (m.position / 100);
+                const dotDelay = 0.2 + idx * 0.35;
                 const labelDelay = dotDelay + 0.25;
 
                 return (
                   <div
                     key={idx}
-                    className="absolute w-full"
-                    style={{ top: `${m.position}%` }}
+                    className="relative w-full"
                   >
                     {/* Year pill sitting directly on the line */}
                     <div
@@ -521,8 +511,8 @@ export function ExperienceSection() {
                         inView ? "animate-timeline-dot-custom" : "scale-0 opacity-0"
                       )}
                       style={{
-                        left: '24px', // Centered on the vertical line
-                        top: '0px',
+                        left: '-40px', // Center on the line (64px padding - 40px = 24px = left-6)
+                        top: '20px',  // Center vertically with the logo/header
                         borderColor: m.isUpcoming ? 'rgba(59, 109, 212, 0.4)' : '#3B6DD4',
                         borderStyle: m.isUpcoming ? 'dashed' : 'solid',
                         animationDelay: `${dotDelay}s`,
@@ -538,13 +528,10 @@ export function ExperienceSection() {
                     {/* Label block (Mobile: right of line, displaying details inline) */}
                     <div
                       className={cn(
-                        "absolute -translate-y-1/2 flex items-start gap-3.5 pr-6",
+                        "flex items-start gap-3.5 pr-2",
                         inView ? "animate-timeline-label-right-custom" : "opacity-0"
                       )}
                       style={{
-                        top: '0px',
-                        left: '64px', // Placed to the right of the year pill
-                        width: 'calc(100% - 76px)',
                         animationDelay: `${labelDelay}s`,
                       }}
                     >
