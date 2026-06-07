@@ -15,7 +15,6 @@ export default getRequestConfig(async ({ locale }) => {
       experience: (await import(`./locales/${resolvedLocale}/experience.json`)).default,
       skills: (await import(`./locales/${resolvedLocale}/skills.json`)).default,
       projects: (await import(`./locales/${resolvedLocale}/projects.json`)).default,
-      growth: (await import(`./locales/${resolvedLocale}/growth.json`)).default,
       contact: (await import(`./locales/${resolvedLocale}/contact.json`)).default,
     },
   };

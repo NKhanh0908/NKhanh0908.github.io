@@ -48,7 +48,6 @@ export function Navbar({ currentLocale }: NavbarProps) {
     { id: 'experience', label: t('nav.experience') },
     { id: 'skills', label: t('nav.skills') },
     { id: 'projects', label: t('nav.projects') },
-    { id: 'growth', label: t('nav.growth') },
     { id: 'contact', label: t('nav.contact') },
   ];
 

@@ -147,20 +147,6 @@ Key Features:
 
 ---
 
-# GROWTH
-
-### Title
-
-Continuous Improvement
-
-### Content
-
-Every project contributes something valuable.
-
-Whether it is architecture, security, performance, collaboration, or problem solving, each experience becomes part of the next system I build.
-
----
-
 # CONTACT
 
 ### Title

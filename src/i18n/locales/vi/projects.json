@@ -1,35 +1,27 @@
 {
   "title": "Dự án tiêu biểu",
   "viewOnGithub": "Xem trên GitHub →",
+  "githubFE": "GitHub (Frontend)",
+  "githubBE": "GitHub (Backend)",
   "items": [
     {
       "name": "Dating Platform",
-      "description": "Nền tảng giao tiếp thời gian thực được thiết kế xoay quanh truyền tải thông điệp WebSocket, xác thực JWT và kiến trúc backend hiện đại.",
-      "teamInfo": "Nhóm 3 thành viên · Thiết kế hệ thống & Tối ưu hóa hiệu suất",
-      "tags": ["Spring Boot", "Spring Security", "WebSocket", "Redis", "JWT", "MySQL", "ReactJS", "Docker"],
-      "github": "https://github.com/NKhanh0908/dating-website",
-      "highlights": [
-        "Thiết kế và triển khai kiến trúc tin nhắn thời gian thực sử dụng WebSocket/STOMP, cho phép giao tiếp hai chiều độ trễ thấp cho trò chuyện, thông báo và các sự kiện tương tác trực tiếp.",
-        "Nghiên cứu và tối ưu hóa các chiến lược chỉ mục hỗn hợp (composite indexing) cho các truy vấn tìm kiếm giúp giảm độ trễ truy vấn trên tập dữ liệu 50k dòng, được xác thực bằng EXPLAIN ANALYZE.",
-        "Triển khai chiến lược bộ nhớ đệm Redis (Cache-Aside) cho hồ sơ người dùng và dữ liệu so khớp thường xuyên truy cập, giảm tải truy vấn cơ sở dữ liệu khoảng 40% và cải thiện tính nhất quán phản hồi dưới tải lớn.",
-        "Bảo mật cả giao tiếp REST và WebSocket bằng xác thực JWT, bao gồm bộ chặn bắt tay xác thực (handshake interception) để từ chối các kết nối trái phép trước khi truy cập broker.",
-        "Xây dựng bộ lọc giới hạn tốc độ (rate-limiting) và chống lạm dụng tùy chỉnh cho các endpoint nhạy cảm (xác thực, OTP, khôi phục mật khẩu), giảm thiểu các mẫu yêu cầu spam và brute-force.",
-        "Phát triển các kiểm thử đơn vị và tích hợp bằng JUnit 5 và Mockito bao gồm quy trình xác thực, quy tắc so khớp và logic kiểm tra nghiệp vụ để đảm bảo độ tin cậy trên các lớp dịch vụ."
-      ]
+      "description": "Hệ thống kết nối và hẹn hò trực tuyến, hỗ trợ người dùng tìm kiếm, ghép đôi dựa trên thuật toán gợi ý và tương tác theo thời gian thực (Real-time). Hệ thống được tối ưu hóa khả năng xử lý đồng thời lớn và bảo mật thông tin cá nhân.",
+      "tags": ["Spring Boot", "Spring Security", "JWT", "WebSocket", "Redis", "MySQL", "ReactJS", "Docker"],
+      "github": "https://github.com/NKhanh0908/dating-website"
     },
     {
       "name": "HRM System",
-      "description": "Hệ thống quản lý nhân sự định hướng ERP độc lập, bao trọn vòng đời nhân sự từ tuyển dụng và tiếp nhận nhân viên mới đến chấm công, tính lương và quản lý đào tạo.",
-      "teamInfo": "Cá nhân · Phát triển chính",
-      "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "Redis", "JavaMail", "Cloudinary", "Docker", "MySQL"],
-      "github": "https://github.com/NKhanh0908/hrm",
-      "highlights": [
-        "Thiết kế và triển khai 5 mô-đun ERP-HR cốt lõi (Tuyển dụng, Quản lý nhân viên, Điểm danh, Tính lương và Đào tạo) với hơn 30 RESTful API tuân theo kiến trúc phân tầng và trừu tượng dịch vụ rõ ràng.",
-        "Xây dựng truy vấn động có thể tái cấu trúc bằng JPA Specification API, cho phép lọc, tìm kiếm, phân trang và sắp xếp linh hoạt trên nhiều mô-đun nghiệp vụ với các đặc tả có thể tái sử dụng.",
-        "Tối ưu hóa truy cập dữ liệu với chiến lược Redis Cache-Aside, chỉ mục B-Tree & composite, và phân vùng ngang (horizontal partitioning) cho bảng lịch sử tính lương để cải thiện hiệu suất truy vấn trên các tập dữ liệu lớn.",
-        "Tích hợp kiểm soát truy cập dựa trên vai trò (RBAC) với Spring Security, bảo vệ các hoạt động nhân sự nhạy cảm như cập nhật lương, truy cập hồ sơ nhân viên và quy trình phê duyệt điểm danh.",
-        "Container hóa cơ sở hạ tầng với Docker để đồng bộ môi trường phát triển cục bộ và triển khai, bao gồm điều phối dịch vụ ứng dụng, cơ sở dữ liệu và bộ đệm."
-      ]
+      "description": "Giải pháp quản trị nguồn nhân lực toàn diện cho doanh nghiệp, hỗ trợ số hóa các quy trình quản lý thông tin nhân viên, chấm công, tính lương, và tự động hóa hệ thống thông báo/gửi mail nội bộ, giúp tối ưu hiệu suất vận hành.",
+      "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "Redis", "JavaMail", "Cloudinary", "MySQL", "ReactJS", "Docker"],
+      "github": "https://github.com/NKhanh0908/hrm"
+    },
+    {
+      "name": "MinuteMind",
+      "description": "Công cụ quản lý thời gian áp dụng phương pháp làm việc ngắt quãng (Pomodoro). Ứng dụng cho phép tự động thiết lập các chu kỳ đếm ngược (ví dụ: 60 phút tập trung, 5-10 phút nghỉ ngơi), tự động gửi thông báo nhắc nhở và thống kê hiệu suất làm việc để giúp người dùng duy trì sự tập trung cao độ, giảm thiểu xao nhãng.",
+      "tags": ["Spring Boot", "JWT", "Redis", "Supabase", "ReactJS Vite"],
+      "githubFE": "https://github.com/NKhanh0908/fe-minute-mind",
+      "githubBE": "https://github.com/NKhanh0908/be-minute-mind"
     }
   ]
 }

@@ -29,11 +29,11 @@ export function AboutSection() {
               </Heading>
             </div>
           </Reveal>
-          
+
           {/* Main Grid split */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column: Description text with smooth enter from left */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -52,7 +52,7 @@ export function AboutSection() {
             </motion.div>
 
             {/* Right Column: Lottie animation with smooth enter from right */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -62,9 +62,9 @@ export function AboutSection() {
               <div className="w-full max-w-[320px] sm:max-w-[360px] lg:max-w-[400px] aspect-square relative select-none">
                 {/* Subtle soft accent glow behind Lottie */}
                 <div className="absolute inset-0 bg-accent/5 rounded-full blur-3xl opacity-60 pointer-events-none" />
-                <LottieAnimation 
-                  animationData={developerAnimation} 
-                  className="w-full h-full relative z-10" 
+                <LottieAnimation
+                  animationData={developerAnimation}
+                  className="w-full h-full relative z-10"
                 />
               </div>
             </motion.div>

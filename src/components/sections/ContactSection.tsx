@@ -21,7 +21,7 @@ export function ContactSection() {
             {/* Header */}
             <div className="space-y-3">
               <span className="font-mono text-xs font-bold text-accent tracking-widest uppercase">
-                07 // CONTACT
+                06 // CONTACT
               </span>
               <Heading level={2} className="text-center md:text-left">
                 {t('title')}

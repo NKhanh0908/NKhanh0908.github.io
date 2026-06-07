@@ -85,7 +85,7 @@ export function BlueprintCard() {
   });
   const lanyardRotate = useTransform([cardX, cardY], ([x, y]) => {
     const xv = x as number, yv = y as number;
-    return -Math.atan2(xv, 64 + yv) * (180 / Math.PI);
+    return Math.atan2(xv, 64 + yv) * (180 / Math.PI);
   });
   const cardRotate = useTransform(cardX, [-200, 200], [-20, 20]);
 

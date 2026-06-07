@@ -5,6 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { locales, Locale } from '@/i18n/config';
 import { inter } from '@/styles/fonts';
 import '@/app/globals.css';
+import KiteCursor from '@/components/ui/KiteCursor';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -33,6 +34,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <body className="antialiased min-h-screen bg-background text-primary-text selection:bg-accent/20 selection:text-accent">
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
+          <KiteCursor />
         </NextIntlClientProvider>
       </body>
     </html>
