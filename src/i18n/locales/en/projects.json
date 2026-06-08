@@ -21,7 +21,8 @@
       "description": "A productivity and focus tool applying the Pomodoro technique. It allows automatic configuration of countdown cycles (e.g., 60-min focus, 5-10 min break), triggers reminder notifications, and tracks work analytics to sustain concentration and minimize distractions.",
       "tags": ["Spring Boot", "JWT", "Redis", "Supabase", "ReactJS Vite"],
       "githubFE": "https://github.com/NKhanh0908/fe-minute-mind",
-      "githubBE": "https://github.com/NKhanh0908/be-minute-mind"
+      "githubBE": "https://github.com/NKhanh0908/be-minute-mind",
+      "demo": "https://project-aedbs.vercel.app/login"
     }
   ]
 }

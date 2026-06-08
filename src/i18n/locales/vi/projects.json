@@ -21,7 +21,8 @@
       "description": "Công cụ quản lý thời gian áp dụng phương pháp làm việc ngắt quãng (Pomodoro). Ứng dụng cho phép tự động thiết lập các chu kỳ đếm ngược (ví dụ: 60 phút tập trung, 5-10 phút nghỉ ngơi), tự động gửi thông báo nhắc nhở và thống kê hiệu suất làm việc để giúp người dùng duy trì sự tập trung cao độ, giảm thiểu xao nhãng.",
       "tags": ["Spring Boot", "JWT", "Redis", "Supabase", "ReactJS Vite"],
       "githubFE": "https://github.com/NKhanh0908/fe-minute-mind",
-      "githubBE": "https://github.com/NKhanh0908/be-minute-mind"
+      "githubBE": "https://github.com/NKhanh0908/be-minute-mind",
+      "demo": "https://project-aedbs.vercel.app/login"
     }
   ]
 }
