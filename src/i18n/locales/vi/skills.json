@@ -2,14 +2,22 @@
   "title": "Công nghệ mình sử dụng",
   "backend": {
     "title": "Backend",
-    "skills": ["Java", "Spring Boot", "Spring Security", "JWT", "Redis", "PostgreSQL", "MySQL", "MongoDB", "WebSocket"]
+    "skills": ["Java", "Spring Boot", "Spring Security", "JWT", "WebSocket", "JUnit 5", "Mockito"]
+  },
+  "database": {
+    "title": "Database",
+    "skills": ["PostgreSQL", "MySQL", "SQL", "MongoDB", "Redis"]
   },
   "frontend": {
     "title": "Frontend",
-    "skills": ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS"]
+    "skills": ["ReactJS", "Redux Toolkit", "TypeScript", "Tailwind CSS"]
   },
   "tools": {
     "title": "Công cụ & DevOps",
-    "skills": ["Docker", "Git", "Maven", "Postman", "Swagger"]
+    "skills": ["Docker", "Git", "GitHub", "Maven", "Postman", "Swagger", "CI/CD basics", "Git-flow"]
+  },
+  "architecture": {
+    "title": "Kiến trúc & Thực tiễn",
+    "skills": ["Microservices", "SOLID Principles", "RBAC", "Outbox Pattern", "Transactional Integrity", "RESTful API Design"]
   }
 }

@@ -7,6 +7,20 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Heading } from '@/components/ui/Heading';
 import { cn } from '@/lib/utils';
+import { 
+  Webhook, 
+  ShieldCheck, 
+  TestTube2, 
+  Database, 
+  GitBranch, 
+  Infinity as InfinityIcon, 
+  Network, 
+  Blocks, 
+  UserCheck, 
+  Mailbox, 
+  FileCheck, 
+  Plug 
+} from 'lucide-react';
 
 export function SkillsSection() {
   const t = useTranslations('skills');
@@ -17,33 +31,56 @@ export function SkillsSection() {
   // Ref to track active floating labels for DOM cleanup on unmount
   const activeSpansRef = useRef<Set<HTMLSpanElement>>(new Set());
 
-  const skillKeys = [
-    // Row 1 (longest)
+  interface SkillItem {
+    name: string;
+    iconSlug?: string;
+    lucideIcon?: any;
+    color: string;
+    category: string;
+  }
+
+  const skillKeys: SkillItem[][] = [
+    // Row 1 (8 keys)
     [
       { name: "Java", iconSlug: "java", color: "#ED8B00", category: "backend" },
       { name: "Spring Boot", iconSlug: "springboot", color: "#6DB33F", category: "backend" },
       { name: "Spring Security", iconSlug: "springsecurity", color: "#6DB33F", category: "backend" },
       { name: "JWT", iconSlug: "jsonwebtokens", color: "#D63AFF", category: "backend" },
-      { name: "Redis", iconSlug: "redis", color: "#DC382D", category: "backend" },
-      { name: "PostgreSQL", iconSlug: "postgresql", color: "#4169E1", category: "backend" },
-      { name: "MySQL", iconSlug: "mysql", color: "#4479A1", category: "backend" },
+      { name: "WebSocket", lucideIcon: Webhook, color: "#3B6DD4", category: "backend" },
+      { name: "JUnit 5", lucideIcon: ShieldCheck, color: "#25A162", category: "backend" },
+      { name: "Mockito", lucideIcon: TestTube2, color: "#54b3a8", category: "backend" },
+      { name: "Redis", iconSlug: "redis", color: "#DC382D", category: "database" },
     ],
-    // Row 2 (offset left)
+    // Row 2 (8 keys)
     [
-      { name: "MongoDB", iconSlug: "mongodb", color: "#47A248", category: "backend" },
-      { name: "WebSocket", iconSlug: "websocket", color: "#3B6DD4", category: "backend" },
-      { name: "React", iconSlug: "react", color: "#61DAFB", category: "frontend" },
-      { name: "TypeScript", iconSlug: "typescript", color: "#3178C6", category: "frontend" },
+      { name: "PostgreSQL", iconSlug: "postgresql", color: "#4169E1", category: "database" },
+      { name: "MySQL", iconSlug: "mysql", color: "#4479A1", category: "database" },
+      { name: "SQL", lucideIcon: Database, color: "#336791", category: "database" },
+      { name: "MongoDB", iconSlug: "mongodb", color: "#47A248", category: "database" },
+      { name: "ReactJS", iconSlug: "react", color: "#61DAFB", category: "frontend" },
       { name: "Redux Toolkit", iconSlug: "redux", color: "#764ABC", category: "frontend" },
-    ],
-    // Row 3 (offset more)
-    [
+      { name: "TypeScript", iconSlug: "typescript", color: "#3178C6", category: "frontend" },
       { name: "Tailwind CSS", iconSlug: "tailwindcss", color: "#06B6D4", category: "frontend" },
-      { name: "Docker", iconSlug: "docker", color: "#2496ED", category: "devops" },
-      { name: "Git", iconSlug: "git", color: "#F05032", category: "devops" },
-      { name: "Maven", iconSlug: "apachemaven", color: "#C71A36", category: "devops" },
-      { name: "Postman", iconSlug: "postman", color: "#FF6C37", category: "devops" },
-      { name: "Swagger", iconSlug: "swagger", color: "#85EA2D", category: "devops" },
+    ],
+    // Row 3 (8 keys)
+    [
+      { name: "Docker", iconSlug: "docker", color: "#2496ED", category: "tools" },
+      { name: "Git", iconSlug: "git", color: "#F05032", category: "tools" },
+      { name: "GitHub", iconSlug: "github", color: "#181717", category: "tools" },
+      { name: "Maven", iconSlug: "apachemaven", color: "#C71A36", category: "tools" },
+      { name: "Postman", iconSlug: "postman", color: "#FF6C37", category: "tools" },
+      { name: "Swagger", iconSlug: "swagger", color: "#85EA2D", category: "tools" },
+      { name: "Git-flow", lucideIcon: GitBranch, color: "#F05032", category: "tools" },
+      { name: "CI/CD basics", lucideIcon: InfinityIcon, color: "#0ea5e9", category: "tools" },
+    ],
+    // Row 4 (6 keys)
+    [
+      { name: "Microservices", lucideIcon: Network, color: "#0284C7", category: "architecture" },
+      { name: "SOLID Principles", lucideIcon: Blocks, color: "#E11D48", category: "architecture" },
+      { name: "RBAC", lucideIcon: UserCheck, color: "#7C3AED", category: "architecture" },
+      { name: "Outbox Pattern", lucideIcon: Mailbox, color: "#D97706", category: "architecture" },
+      { name: "Transactional Integrity", lucideIcon: FileCheck, color: "#059669", category: "architecture" },
+      { name: "RESTful API Design", lucideIcon: Plug, color: "#2563EB", category: "architecture" },
     ],
   ];
 
@@ -148,14 +185,13 @@ export function SkillsSection() {
   };
 
   const renderIcon = (key: typeof flatKeys[number]) => {
-    if (key.iconSlug === 'websocket') {
+    if (key.lucideIcon) {
+      const IconComponent = key.lucideIcon;
       return (
-        <span 
+        <IconComponent 
           style={{ color: key.color }} 
-          className="text-sm md:text-base font-black tracking-tighter transition-opacity duration-150 select-none"
-        >
-          WS
-        </span>
+          className="w-7 h-7 md:w-9 md:h-9 transition-all duration-150 shrink-0 stroke-[1.5]"
+        />
       );
     }
     return (
@@ -197,10 +233,11 @@ export function SkillsSection() {
             className="hidden md:flex flex-col gap-2.5 relative w-fit mx-auto overflow-visible py-4 select-none"
           >
             {skillKeys.map((row, rowIdx) => {
-              // Apply QWERTY stagger alignment offsets: Row 1 = 0, Row 2 = pl-8 (32px), Row 3 = pl-16 (64px)
+              // Apply QWERTY stagger alignment offsets: Row 1 = 0, Row 2 = pl-8 (32px), Row 3 = pl-16 (64px), Row 4 = pl-24 (96px)
               let staggerClass = "";
               if (rowIdx === 1) staggerClass = "pl-8";
               else if (rowIdx === 2) staggerClass = "pl-16";
+              else if (rowIdx === 3) staggerClass = "pl-24";
 
               return (
                 <div key={rowIdx} className={cn("flex flex-row gap-2", staggerClass)}>
@@ -209,8 +246,10 @@ export function SkillsSection() {
                     
                     // Accent dot color mappings
                     let dotColor = "bg-[#3B6DD4]"; // Backend blue
-                    if (key.category === "frontend") dotColor = "bg-[#a855f7]"; // Frontend purple
-                    else if (key.category === "devops") dotColor = "bg-[#f59e0b]"; // DevOps amber
+                    if (key.category === "database") dotColor = "bg-[#10b981]"; // Database emerald
+                    else if (key.category === "frontend") dotColor = "bg-[#a855f7]"; // Frontend purple
+                    else if (key.category === "tools") dotColor = "bg-[#f59e0b]"; // Tools amber
+                    else if (key.category === "architecture") dotColor = "bg-[#6366f1]"; // Architecture indigo
 
                     return (
                       <motion.div
@@ -273,8 +312,10 @@ export function SkillsSection() {
               const isPressed = activeKey === key.name;
               
               let dotColor = "bg-[#3B6DD4]";
-              if (key.category === "frontend") dotColor = "bg-[#a855f7]";
-              else if (key.category === "devops") dotColor = "bg-[#f59e0b]";
+              if (key.category === "database") dotColor = "bg-[#10b981]";
+              else if (key.category === "frontend") dotColor = "bg-[#a855f7]";
+              else if (key.category === "tools") dotColor = "bg-[#f59e0b]";
+              else if (key.category === "architecture") dotColor = "bg-[#6366f1]";
 
               return (
                 <motion.div
